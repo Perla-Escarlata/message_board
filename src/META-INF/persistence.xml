@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="message_board" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>models.Message</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value='jdbc:mysql://us-cdbr-east-04.cleardb.com/heroku_e859a7889344996?reconnect=true&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8'/>
+			<property name="javax.persistence.jdbc.user" value="bc6a67c78d59b8"/>
+			<property name="javax.persistence.jdbc.password" value="a4587097"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+			<property name="hibernate.shou_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
